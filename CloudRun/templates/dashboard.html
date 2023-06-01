@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Time Cloud</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <!-- DataTables CSS -->
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.21/css/jquery.dataTables.min.css">
+    <!-- Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <style>
+
+        h4 {
+            margin-top: 40px;
+        }
+
+        /* adapted from https://matthewjamestaylor.com/3-column-layouts#responsive-3-column-grid */
+        /* container */
+        .responsive-three-column-grid {
+            display:block;
+        }
+
+        /* columns */
+        .responsive-three-column-grid > * {
+            padding:1rem;
+            width: 50vw !important;
+            height: 50vw !important;
+            /* add margin to the bottom */
+            margin-bottom: 60px;
+        }
+
+        /* tablet breakpoint */
+        @media (min-width:768px) {
+            .responsive-three-column-grid {
+                display: grid;
+                grid-auto-rows: 1fr;
+                grid-template-columns: 1fr 1fr 1fr;
+            }
+
+            .responsive-three-column-grid > * {
+                width: 20vw !important;
+                height: 20vw !important;
+                margin-bottom: 60px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation bar -->
+    <nav class="navbar navbar-light bg-light">
+        <a class="navbar-brand" href="#">Time Cloud</a>
+    </nav>
+
+    <!-- Main container -->
+    <div class="container">
+        <!-- Statistics section -->
+        <div id="statistics-section">
+            <h2>Statistics</h2>
+            <h4>Currently Working</h4>
+            <div id="user-status" class="responsive-three-column-grid"></div>
+            <h4>User Progress</h4>
+            <div id="user-progress" class="responsive-three-column-grid"></div>
+            <h4>Project Progress</h4>
+            <div id="project-progress" class="responsive-three-column-grid"></div>
+        </div>
+
+        <!-- Management section -->
+        <div id="management-section">
+            <div style="margin-bottom: 40px;"></div>
+            <h2>Management</h2>
+            <h4>Users</h4>
+            <div id="user-list">
+                <table id="users-table" class="display">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Name</th>
+                            <th>Work Hours</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    </tbody>
+                </table>
+            </div>
+            <h4>Projects</h4>
+            <div id="project-list">
+                <table id="projects-table" class="display">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Name</th>
+                            <th>Work Hours</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    </tbody>
+                </table>
+            </div>
+            <h4>Project Users</h4>
+            <div id="project-users">
+                <table id="project-users-table" class="display">
+                    <thead>
+                        <tr>
+                            <th>Project</th>
+                            <th>Assigned Users</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    </tbody>
+                </table>
+            </div>
+
+            <h4> Add a user </h4>
+            <div id="add-user">
+                <input type="text" id="user-id-input" placeholder="User ID">
+                <input type="text" id="user-name-input" placeholder="User Name">
+                <input type="text" id="user-work-hours-input" placeholder="Work Hours">
+                <button id="add-user-button">Add User</button>
+            </div>
+            <h4> Add a project </h4>
+            <div id="add-project">
+                <input type="text" id="project-id-input" placeholder="Project ID">
+                <input type="text" id="project-name-input" placeholder="Project Name">
+                <input type="text" id="project-hours-input" placeholder="Project Hours">
+                <button id="add-project-button">Add Project</button>
+            </div>
+            <h4> Add a user to a project </h4>
+            <div id="add-user-to-project">
+                <input type="text" id="user-id-assign-input" placeholder="User ID">
+                <input type="text" id="project-id-assign-input" placeholder="Project ID">
+                <button id="assign-user-button">Assign User to Project</button>
+            </div>
+            <div style="margin-bottom: 100px;"></div>
+        </div>
+    </div>
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <!-- Bootstrap JS -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+    <!-- DataTables JS -->
+    <script src="https://cdn.datatables.net/1.10.21/js/jquery.dataTables.min.js"></script>
+    <!-- Custom JS (this file will contain the AJAX calls and data processing) -->
+    <script src="/static/js/dashboard.js"></script>
+</body>
+</html>
