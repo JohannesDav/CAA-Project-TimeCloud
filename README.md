@@ -2,7 +2,7 @@
 
 <img src="time-cloud.png" width="20%">
 
-Time Cloud is a cloud-based time logging system designed to automate the tracking of project work hours. It utilizes touchscreen interaction and NFC identification, in conjunction with Google Cloud components, to record work sessions, assign hours to projects, facilitate multi-user collaboration, and generate progress reports.
+Time Cloud is a cloud-based time logging system designed to automate the tracking of project work hours. It utilizes IOT devices with touchscreen interaction and NFC identification, in conjunction with Google Cloud components, to record work sessions, assign hours to projects, facilitate multi-user collaboration, and generate progress reports.
 
 ### Link to the video: 
 ### Link to the live dashboard: https://dashboard-3zkskaydnq-oa.a.run.app/
