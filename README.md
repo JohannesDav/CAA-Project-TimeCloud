@@ -1,6 +1,6 @@
 # Time Cloud - CAA 2023 Projet - Team Google
 
-<img src="time-cloud.png" width="20%">
+<img src="time-cloud.png" style="width:300px" />
 
 Time Cloud is a cloud-based time logging system designed to automate the tracking of project work hours. It utilizes IOT devices with touchscreen interaction and NFC identification, in conjunction with Google Cloud components, to record work sessions, assign hours to projects, facilitate multi-user collaboration, and generate progress reports.
 
