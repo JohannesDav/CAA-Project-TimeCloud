@@ -21,11 +21,11 @@ The MicroPython code for the M5Stack Core 2 is in the [main.py file](M5Stack/mai
 
 [main.py](CloudRun/main.py): Flask web application interfacing with Google BigQuery for user and project management. It defines API endpoints for getting user status, user progress, project progress, user and project lists, as well as for adding users, adding projects, and assigning users to projects.
 
-[dashboard.html](CloudRun/templates/dashboard.html): HTML file constructing the user interface of the project management dashboard.
+[dashboard.html](CloudRun/templates/dashboard.html): HTML file constructing the interface of the dashboard.
 
-[dashboard.js](CloudRun/static/js/dashboard.js): JavaScript file managing the interaction between the server and the user interface.
+[dashboard.js](CloudRun/static/js/dashboard.js): JavaScript file creating the charts and managing the interaction between the server and the user interface.
 
-[requirements.txt](CloudRun/requirements.txt): Text file listing the Python library dependencies for the application.
+[requirements.txt](CloudRun/requirements.txt): Python library dependencies for the application.
 
 [Dockerfile](CloudRun/Dockerfile): Script containing instructions to create a Docker image of the application for deployment on Google Cloud Run. The flask server can be deployed using ```gcloud run deploy```.
 
